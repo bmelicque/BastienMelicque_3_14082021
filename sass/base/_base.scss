@@ -1,0 +1,21 @@
+* {
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: none;
+}
+
+html {
+    scrollbar-gutter: always both;
+}
+
+body {
+    width: 100%;
+    max-width: 767px;
+    margin: auto;
+}
+
+// Pour que le site reste lisible en attendant de travailler sur les cartes
+img {
+    width: 100%;
+}
