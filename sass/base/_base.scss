@@ -3,16 +3,19 @@
     margin: 0;
     background: none;
     border: none;
+    outline: none;
 }
 
 html {
-    scrollbar-gutter: always both;
+    overflow: auto;
 }
 
 body {
+    @include flex-col;
     width: 100%;
     max-width: 767px;
     margin: auto;
+    overflow-x: hidden;
 }
 
 // Pour que le site reste lisible en attendant de travailler sur les cartes
