@@ -75,16 +75,36 @@ img {
   font-weight: bold;
 }
 .form__submit {
+  position: relative;
   margin-top: 1rem;
   height: 3rem;
   border-radius: 1.5rem;
   background: linear-gradient(#FF79DA, #9356DC);
   padding: 0 1rem;
+  overflow-x: hidden;
   font-size: 1rem;
   color: white;
   box-shadow: 0 3px 5px 3px #dddddd;
   cursor: pointer;
-  transition: 0.2s;
+  transition: 0.1s;
+}
+.form__submit::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  opacity: 0;
+  transition: 0.1s;
+}
+.form__submit:hover {
+  box-shadow: 0 3px 5px 4px #dddddd;
+}
+.form__submit:hover::after {
+  opacity: 0.1;
 }
 
 /*# sourceMappingURL=style.css.map */
