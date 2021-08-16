@@ -1,0 +1,24 @@
+.heart {
+    @include center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    .far {
+        position: absolute;
+        @include position(0);
+        color: inherit;
+        @include bg-clip();
+    }
+    .fas {
+        position: relative;
+        @include position(1, 0, 0, 1rem);
+        @include bg-clip();
+        transform: scale(0);
+        transform-origin: center bottom;
+        transition: .2s;
+    }
+    
+    &:hover .fas{
+        transform: scale(1);
+        transform-origin: center bottom;
+    }
+}

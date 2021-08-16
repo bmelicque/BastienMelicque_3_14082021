@@ -77,6 +77,48 @@ body {
   font-weight: 600;
 }
 
+.heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.heart .far {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: inherit;
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  color: transparent;
+}
+.heart .fas {
+  position: relative;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 1rem;
+  left: 0;
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  color: transparent;
+  transform: scale(0);
+  transform-origin: center bottom;
+  transition: 0.2s;
+}
+.heart:hover .fas {
+  transform: scale(1);
+  transform-origin: center bottom;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -110,49 +152,10 @@ body {
   font-size: 0.9em;
 }
 .card__like {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: absolute;
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-.card__like .far {
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  color: inherit;
-  background: linear-gradient(#FF79DA, #9356DC);
-  background-clip: content-box;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  color: transparent;
-}
-.card__like .fas {
-  position: relative;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  bottom: 1rem;
-  left: 0;
-  background: linear-gradient(#FF79DA, #9356DC);
-  background-clip: content-box;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  color: transparent;
-  transform: scale(0);
-  transform-origin: center bottom;
-  transition: 0.2s;
-}
-.card__like:hover .fas {
-  transform: scale(1);
-  transform-origin: center bottom;
 }
 .card--new::after {
   content: "Nouveau";
@@ -273,13 +276,33 @@ body {
 }
 
 .section {
+  position: relative;
   display: flex;
   flex-direction: column;
-  padding: 3rem 1.25rem;
+  padding: 2rem 1.25rem;
   gap: 1.25rem;
 }
 .section--bg {
   background: #F6F6F6;
+}
+.section--menu {
+  border-radius: 2rem;
+  position: relative;
+  top: -2rem;
+}
+.section__title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.section__title--menu {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.8rem;
+}
+.section__like {
+  position: relative;
+  right: 0.75rem;
 }
 .section ol {
   display: flex;
