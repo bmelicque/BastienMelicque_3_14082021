@@ -41,17 +41,17 @@
         color: white;
         box-shadow: 0 3px 5px 3px darken($color-bg, 10%);
         cursor: pointer;
-        transition: .1s;
+        transition: .2s;
         &::after {
             @include pseudo-over;
             background: white;
             opacity: 0;
-            transition: .1s;
+            transition: .2s;
         }
         &:hover {
-            box-shadow: 0 3px 5px 4px darken($color-bg, 10%);
+            box-shadow: 0 3px 5px 5px darken($color-bg, 15%);
             &::after {
-                opacity: .1;
+                opacity: .15;
             }
         }
     }

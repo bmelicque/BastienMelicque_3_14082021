@@ -1,0 +1,45 @@
+.step {
+    @include flex-row;
+    position: relative;
+
+    &__number {
+        position: absolute;
+        left: 0;
+        top: $step-h/2;
+        transform: translateY(-50%);
+        z-index: 1;
+        height: $bullet-h;
+        width: $bullet-h;
+        border-radius: 50%;
+        background: $color-primary;
+        @include center;
+        color: white;
+    }
+    &__content {
+        @include flex-row;
+        align-items: center;
+        margin-left: $bullet-h/2;
+        width: 100%;
+        height: $step-h;
+        border-radius: 1rem;
+        background: $color-bg;
+        box-shadow: 0 3px 5px 3px darken($color-bg, 5%);
+        padding-left: 1rem;
+        transition: .2s;
+        &:hover {
+            background: #F5EBFF;
+            .step__icon {
+                color: $color-primary;
+            }
+        }
+    }
+    &__icon {
+        display: inline-block;
+        width: 3rem;
+        text-align: center;
+        color: $color-dark;
+    }
+    &__text {
+        font-weight: 600;
+    }
+}
