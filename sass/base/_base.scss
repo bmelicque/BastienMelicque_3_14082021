@@ -13,12 +13,7 @@ html {
 body {
     @include flex-col;
     width: 100%;
-    max-width: 767px;
+    max-width: 568px;
     margin: auto;
     overflow-x: hidden;
-}
-
-// Pour que le site reste lisible en attendant de travailler sur les cartes
-img {
-    width: 100%;
 }

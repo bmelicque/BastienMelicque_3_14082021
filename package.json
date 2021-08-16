@@ -7,6 +7,6 @@
     "sass": "sass --watch ./sass/main.scss:./css/style.css"
   },
   "keywords": [],
-  "author": "",
+  "author": "Bastien Mélicque",
   "license": "ISC"
 }

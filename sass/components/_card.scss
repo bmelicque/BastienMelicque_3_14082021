@@ -6,12 +6,21 @@
     overflow: hidden;
     height: 15rem;
     box-shadow: 0 3px 5px 3px darken($color-bg, 5%);
+    transform: scale(1);
+    transition: .2s;
+
+    &:hover {
+        box-shadow: 0 3px 10px 6px darken($color-bg, 10%);
+        transform: scale(1.01);
+    }
+
     &__img {
         width: 100%;
         object-fit: cover;
         flex: 1 1 10rem;
         min-height: 0;
     }
+
     &__content {
         @include flex-col;
         position: relative;
