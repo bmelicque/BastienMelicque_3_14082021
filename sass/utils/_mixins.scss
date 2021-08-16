@@ -2,14 +2,21 @@
     font-family: 'Shrikhand', cursive;
 }
 
-@mixin flex-row {
+@mixin flex-row($justify: false) {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    @if $justify {
+        justify-content: $justify;
+    }
 }
 
-@mixin flex-col {
+@mixin flex-col($align: false) {
     display: flex;
     flex-direction: column;
+    @if $align {
+        align-items: $align;
+    }
 }
 
 @mixin center {

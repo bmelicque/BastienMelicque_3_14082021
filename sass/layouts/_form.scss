@@ -1,14 +1,10 @@
 .form {
     background: $color-bg;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-col(center);
     text-align: center;
     z-index: -1;
     &__searchbar {
-        @include flex-row;
-        justify-content: center;
-        align-items: center;
+        @include flex-row(center);
         gap: 1rem;
         height: 3rem;
         width: 100%;
@@ -23,8 +19,7 @@
     }
     &__content {
         padding: 2.5rem 2rem;
-        @include flex-col;
-        align-items: center;
+        @include flex-col(center);
         gap: 1rem;
     }
     &__title {
