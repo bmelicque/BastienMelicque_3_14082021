@@ -1,11 +1,8 @@
 .card {
     @include flex-col;
+    @include btn;
     position: relative;
-    background: white;
-    border-radius: 1rem;
-    overflow: hidden;
     height: 15rem;
-    box-shadow: 0 3px 5px 3px darken($color-bg, 5%);
     transform: scale(1);
     transition: .2s;
 

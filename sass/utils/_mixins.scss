@@ -2,10 +2,12 @@
     font-family: 'Shrikhand', cursive;
 }
 
-@mixin flex-row($justify: false) {
+@mixin flex-row($justify: false, $align: center) {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    @if $align != stretch {
+        align-items: $align;
+    }
     @if $justify {
         justify-content: $justify;
     }
@@ -75,4 +77,12 @@
     -webkit-background-clip: text;
     -moz-background-clip: text;
     color: transparent;
+}
+
+@mixin btn {
+    border-radius: 1rem;
+    box-shadow: 0 3px 5px 3px darken($color-bg, 5%);
+    background: white;
+    overflow: hidden;
+    width: 100%;
 }

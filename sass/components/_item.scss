@@ -1,0 +1,61 @@
+.item {
+    @include btn;
+    @include flex-row(space-between);
+    font-size: 1rem;
+    cursor: pointer;
+
+    &__content {
+        @include flex-row(space-between);
+        flex: 1 0 100%;
+        transition: .4s ease-in-out;
+    }
+
+    &__text {
+        @include flex-col(start);
+        min-width: 0;
+        line-height: 1.5rem;
+        padding: .5rem .8rem;
+        transition: .4s;
+    }
+
+    &__description {
+        width: 100%;
+        white-space: nowrap;
+        overflow-x: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__price {
+        font-weight: bold;
+        color: $color-dark;
+        align-self: flex-end;
+        margin: .8rem 1.5rem .8rem 0;
+    }
+
+    &__check {
+        @include flex-row(center);
+        background: $color-tertiary;
+        align-self: stretch;
+        flex: 0 0 4rem;
+
+        i {
+            @include flex-row(center);
+            width: 1.25rem;
+            height: 1.25rem;
+            background: white;
+            border-radius: 50%;
+            color: $color-tertiary;
+            font-size: .9rem;
+        }
+    }
+
+    &:hover {
+        .item__content {
+            flex: 1 1 100%;
+        }
+
+        i {
+            animation: spinning .4s ease-out;
+        }
+    }
+}

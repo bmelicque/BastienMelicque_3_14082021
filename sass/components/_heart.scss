@@ -5,8 +5,9 @@
     .far {
         position: absolute;
         @include position(0);
-        color: inherit;
         @include bg-clip();
+        color: inherit;
+        transition: .2s;
     }
     .fas {
         position: relative;
@@ -17,8 +18,13 @@
         transition: .2s;
     }
     
-    &:hover .fas{
-        transform: scale(1);
-        transform-origin: center bottom;
+    &:hover{
+        .far {
+            color: transparent;
+        }
+        .fas {
+            transform: scale(1);
+            transform-origin: center bottom;
+        }
     }
 }

@@ -1,4 +1,7 @@
 .menu {
+    @include flex-col;
+    gap: 1rem;
+
     &__title {
         position: relative;
         text-transform: uppercase;
