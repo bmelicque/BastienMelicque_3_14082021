@@ -82,6 +82,93 @@ ol {
   font-weight: 600;
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  height: 15rem;
+  box-shadow: 0 3px 5px 3px #e9e9e9;
+}
+.card__img {
+  width: 100%;
+  object-fit: cover;
+  flex: 1 1 10rem;
+  min-height: 0;
+}
+.card__content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex: 1 0;
+  justify-content: space-between;
+  margin: 0.5rem 0.7rem 0.3rem;
+  line-height: 1.5rem;
+  font-size: 0.9em;
+}
+.card__like {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.card__like .far {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: inherit;
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  color: transparent;
+}
+.card__like .fas {
+  position: relative;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 1rem;
+  left: 0;
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  color: transparent;
+  transform: scale(0);
+  transform-origin: center bottom;
+  transition: 0.2s;
+}
+.card__like:hover .fas {
+  transform: scale(1);
+  transform-origin: center bottom;
+}
+.card--new::after {
+  content: "Nouveau";
+  position: absolute;
+  z-index: 1;
+  top: 1rem;
+  right: 1rem;
+  bottom: auto;
+  left: auto;
+  border-radius: 3px;
+  padding: 0.5rem;
+  background: #99E2D0;
+  color: #278870;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
 .header {
   display: flex;
   flex-direction: row;
@@ -163,13 +250,13 @@ ol {
 }
 
 .section {
+  display: flex;
+  flex-direction: column;
   padding: 3rem 1.25rem;
+  gap: 1.25rem;
 }
 .section--bg {
   background: #F6F6F6;
-}
-.section__title {
-  margin-bottom: 1rem;
 }
 .section ol {
   display: flex;

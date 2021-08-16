@@ -1,0 +1,65 @@
+.card {
+    @include flex-col;
+    position: relative;
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    height: 15rem;
+    box-shadow: 0 3px 5px 3px darken($color-bg, 5%);
+    &__img {
+        width: 100%;
+        object-fit: cover;
+        flex: 1 1 10rem;
+        min-height: 0;
+    }
+    &__content {
+        @include flex-col;
+        position: relative;
+        flex: 1 0;
+        justify-content: space-between;
+        margin: .5rem .7rem .3rem;
+        line-height: 1.5rem;
+        font-size: .9em;
+    }
+    &__like {
+        @include center;
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.5rem;
+        cursor: pointer;
+        .far {
+            position: absolute;
+            @include position(-1);
+            color: inherit;
+            @include bg-clip();
+        }
+        .fas {
+            position: relative;
+            @include position(1, 0, 0, 1rem);
+            @include bg-clip();
+            transform: scale(0);
+            transform-origin: center bottom;
+            transition: .2s;
+        }
+
+        &:hover .fas{
+            transform: scale(1);
+            transform-origin: center bottom;
+        }
+    }
+    &--new {
+        &::after {
+            content: 'Nouveau';
+            position: absolute;
+            @include position(1, 1rem, 1rem, auto, auto);
+            border-radius: 3px;
+            padding: .5rem;
+            background: $color-tertiary;
+            color: darken($color-tertiary, 40%);
+            font-size: .8rem;
+            font-weight: 700;
+        }
+    }
+}

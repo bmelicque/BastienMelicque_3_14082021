@@ -1,10 +1,9 @@
 .section {
+    @include flex-col;
     padding: 3rem 1.25rem;
+    gap: 1.25rem;
     &--bg {
         background: $color-bg;
-    }
-    &__title {
-        margin-bottom: 1rem;
     }
     ol {
         @include flex-col;
