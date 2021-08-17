@@ -17,4 +17,10 @@
             border-bottom: 3px solid $color-tertiary;
         }
     }
+
+    &__list {
+        @include flex-col;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
 }

@@ -228,6 +228,7 @@ body {
   white-space: nowrap;
   overflow-x: hidden;
   text-overflow: ellipsis;
+  text-align: left;
 }
 .item__price {
   font-weight: bold;
@@ -415,6 +416,12 @@ body {
   left: 0;
   width: 2.5rem;
   border-bottom: 3px solid #99E2D0;
+}
+.menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .footer {
