@@ -8,22 +8,27 @@
         @include flex-row(space-between);
         flex: 1 0 100%;
         transition: .4s ease-in-out;
+        @include ellipsis;
     }
     
     &__text {
         @include flex-col(start);
+        flex: 1 1 100%;
         min-width: 0;
         line-height: 1.5rem;
         padding: .5rem .8rem;
         transition: .4s;
     }
+
+    &__name {
+        min-width: 0;
+        @include ellipsis;
+    }
     
     &__description {
         width: 100%;
-        white-space: nowrap;
-        overflow-x: hidden;
-        text-overflow: ellipsis;
-        text-align: left;
+        min-width: 0;
+        @include ellipsis;
     }
     
     &__price {

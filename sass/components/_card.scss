@@ -6,6 +6,14 @@
     transform: scale(1);
     transition: .2s;
 
+    @include md {
+        flex: 1 33%;
+    }
+
+    @include xl {
+        flex: 1 17%;
+    }
+
     &:hover {
         box-shadow: 0 3px 10px 6px darken($color-bg, 10%);
         transform: scale(1.01);

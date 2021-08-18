@@ -2,6 +2,10 @@
     @include flex-row;
     position: relative;
 
+    @include lg {
+        flex: 1;
+    }
+
     &__number {
         position: absolute;
         left: 0;

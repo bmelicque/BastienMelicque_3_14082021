@@ -2,6 +2,11 @@
     @include flex-col;
     gap: 1rem;
 
+    @include lg {
+        flex: 1 0 25%;
+        min-width: 0;
+    }
+
     &__title {
         position: relative;
         text-transform: uppercase;

@@ -1,6 +1,12 @@
 .banner {
-    width: 100%;
+    width: 100vw;
+    position: relative;
+    left: calc(50% - 50vw);
     height: 16rem;
     min-height: 0;
     object-fit: cover;
+
+    @include xl {
+        height: 20vw;
+    }
 }

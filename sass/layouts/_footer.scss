@@ -1,6 +1,7 @@
 .footer {
+    @include flex-col;
     padding: 1.5rem 1.25rem 1.5rem;
-    background: $color-dark;
+    @include extended-bg($color-dark);
     color: white;
     line-height: 2rem;
 
@@ -9,6 +10,16 @@
         font-weight: normal;
         font-size: 1rem;
         margin-bottom: .5rem;
+
+        @include xl {
+            align-self: center;
+        }
+    }
+
+    &__nav {
+        @include xl {
+            @include flex-row(space-evenly);
+        }
     }
 
     &__link i {

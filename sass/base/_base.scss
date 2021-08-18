@@ -13,7 +13,11 @@ html {
 body {
     @include flex-col;
     width: 100%;
-    max-width: 568px;
-    margin: auto;
     overflow-x: hidden;
+}
+
+main, footer {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
 }

@@ -86,3 +86,47 @@
     overflow: hidden;
     width: 100%;
 }
+
+@mixin extended-bg($bg: none) {
+    background: $bg;
+    position: relative;
+    &::before {
+        content:'';
+        position: absolute;
+        @include position(-1, 0, auto, 0, 50%);
+        width: 100vw;
+        transform: translateX(-50%);
+        background: $bg;
+    }
+}
+
+@mixin ellipsis {
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+
+@mixin sm {
+    @media screen and (min-width: 576px) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media screen and (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}

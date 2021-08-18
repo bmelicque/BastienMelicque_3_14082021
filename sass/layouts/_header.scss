@@ -11,9 +11,15 @@
 
     &__link {
         position: absolute;
-        @include position(1, 50%, auto, auto, 2rem);
+        @include position(1, 50%, auto, auto, 15%);
         transform: translateY(-50%);
         font-size: 1.5rem;
         color: $color-dark;
+        transition: .2s;
+
+        &:hover {
+            color: lighten($color-dark, 10%);
+            text-shadow: 0 0 1px lighten($color-dark, 20%);
+        }
     }
 }

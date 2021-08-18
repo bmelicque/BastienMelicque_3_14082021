@@ -5,17 +5,32 @@
     gap: 1.25rem;
 
     &--bg {
-        background: $color-bg;
+        @include extended-bg($color-bg);
+        @include md {
+            flex-flow: row wrap;
+        }
     }
 
     &--menu {
+        background: $color-bg;
         border-radius: 2rem 2rem 0 0;
-        position: relative;
-        top: -2rem;
+        margin-top: -2rem;
+
+        @include lg {
+            flex-flow: row wrap;
+            justify-content: space-around;
+        }
+
+        @include xl {
+            @include extended-bg($color-bg);
+            margin-top: 0;
+            border-radius: 0;
+        }
     }
 
     &__title {
         @include flex-row(space-between);
+        width: 100%;
         &--menu {
             @include font-title;
             font-size: 1.8rem;
@@ -30,5 +45,10 @@
     ol {
         @include flex-col;
         gap: 1.5rem;
+
+        @include lg {
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
     }
 }
