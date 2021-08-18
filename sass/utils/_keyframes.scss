@@ -19,3 +19,21 @@
         opacity: 1;
     }
 }
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+        display: flex;
+    }
+
+    99% {
+        display: flex;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+}

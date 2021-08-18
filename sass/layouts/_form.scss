@@ -2,7 +2,6 @@
     @include extended-bg($color-bg);
     @include flex-col(center);
     text-align: center;
-    z-index: -1;
     &__searchbar {
         @include flex-row(center);
         gap: 1rem;
