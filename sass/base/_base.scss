@@ -16,8 +16,12 @@ body {
     overflow-x: hidden;
 }
 
-main, footer {
+.main, .footer {
     width: 100%;
     max-width: 1200px;
     margin: auto;
+}
+
+.main--menu {
+    @include extended-bg($color-bg);
 }
