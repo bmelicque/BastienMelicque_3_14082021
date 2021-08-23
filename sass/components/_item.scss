@@ -1,3 +1,4 @@
+/* Désigne les boutons correspondants aux "entrées", "plats" et "desserts" */
 .item {
     @include btn;
     @include flex-row(space-between);

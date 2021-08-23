@@ -37,6 +37,12 @@
     right: 0;
 }
 
+// Pour positionner un élément
+// $z correspond au z-index;
+// Si seulement $a est défini, il correspond à "top", "bottom", "left" et "right"
+// Si $a et $b : $a correspond aux coordonnées verticales et $b aux horizontales
+// Si $a, $b et $c : $a > top; $b > left, right; $c > bottom
+// Si les quatres sont définies : $a > top; $b > right; $c > bottom; $d > left
 @mixin position($z: 0, $a: false, $b: false, $c: false, $d: false) {
     z-index: $z;
     @if($a){
@@ -87,6 +93,7 @@
     width: 100%;
 }
 
+/* Pour que le background s'étende sur toute la largeur de la page */
 @mixin extended-bg($bg: none) {
     background: $bg;
     position: relative;

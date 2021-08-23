@@ -8,6 +8,7 @@
     }
 }
 
+/* Apparition des éléments des menus des restaurants */
 @keyframes appear {
     from {
         transform: translateY(.5rem);
@@ -26,14 +27,8 @@
         display: flex;
     }
 
-    99% {
-        display: flex;
-        visibility: visible;
-    }
-
     100% {
         opacity: 0;
-        visibility: hidden;
         display: none;
     }
 }
